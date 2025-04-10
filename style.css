@@ -710,4 +710,81 @@ span{
   .services-container{
     grid-template-columns: repeat(1,1fr);
   }
+  /* Add these to your existing CSS */
+
+/* Better mobile base sizing */
+@media (max-width: 768px) {
+  html {
+    font-size: 50%;
+  }
+  
+  .home-content h1 {
+    font-size: 5rem;
+    line-height: 1.2;
+  }
+  
+  .heading {
+    font-size: 5rem;
+    margin: 3rem 0;
+  }
+  
+  /* Fix text animation overflow */
+  .text-animation {
+    min-width: auto;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  /* Better project card layout */
+  .projects-box {
+    grid-template-columns: 1fr;
+  }
+  
+  /* Improve timeline layout */
+  .timeline-items::before {
+    left: 7px;
+  }
+  
+  .timeline-item:nth-child(odd),
+  .timeline-item:nth-child(even) {
+    padding-left: 37px;
+    padding-right: 0;
+    text-align: left;
+  }
+  
+  .timeline-dot {
+    left: 0;
+  }
+  
+  /* Better service boxes */
+  .service-box {
+    height: auto;
+    padding: 3rem 1rem;
+  }
+  
+  .service-info h4 {
+    font-size: 2.5rem;
+  }
+}
+
+/* Fix for very small screens */
+@media (max-width: 480px) {
+  .home-img img {
+    width: 80vw;
+  }
+  
+  .home-content h1 {
+    font-size: 4rem;
+  }
+  
+  .btn-group {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+}
 }
